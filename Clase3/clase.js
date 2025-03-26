@@ -12,7 +12,7 @@ const max = numeros2.reduce((current_max, valor) => {
         return valor
     } else {
         return current_max
-    }
+    }z
 },0) // Current max es el acumulador. Compara numero por numero
 // const max = numeros2.reduce((current_max, valor) => valor > current_max ? valor : current_max, 0)    --- Esto es igual al if
 console.log(max)
@@ -40,3 +40,34 @@ console.log ("-----------------------")
 const nombres = ['Mackaber', 'Luis', 'Ana', 'Pedro', 'Juan']
 const incluyeJuan = nombres.includes('Juan')
 console.log(incluyeJuan)
+
+console.log ("-----------------------")
+
+let carritocompras = {
+    productos: [],
+    agregarProducto: function (producto) {
+        this.productos.push(producto)
+    },
+    eliminarProducto: function(indice) {
+        this.productos.splice(indice, 1)
+    },
+    this_en_objeto: function() {
+        return this
+    },
+    this_en_arrow: () => {
+        return this
+    }
+
+}
+
+carritocompras.agregarProducto('Leche')
+carritocompras.agregarProducto('Manzanas')
+carritocompras.agregarProducto('Platanos')
+carritocompras.agregarProducto('Uvas')
+
+console.log(carritocompras.productos)
+
+carritocompras.eliminarProducto(0) //Elimina el primero
+console.log(carritocompras.productos)
+console.log(carritocompras.this_en_objeto())
+console.log(carritocompras.this_en_arrow())
