@@ -1,73 +1,101 @@
-// Metodos adicionales de arreglos
+// Métodos adicionales de Arreglos
 
-const numeros = [1, 2, 3, 4, 5]
-// const funcion= (acumulador, elemento) => acumulador + elemento
-const suma = numeros.reduce((acumulador, valor) => acumulador + valor, 0)
-console.log(suma)
+// Reduce
 
-// Numero maximo
+const numeros = [1, 2, 3, 4]
+// const fn = (acumulador, elemento) => acumulador + elemento
+const suma = numeros.reduce((acumulador, elemento) => acumulador + elemento, 0)
+console.log(suma);
+
+// numero máximo
 const numeros2 = [3, 5, 66, 2, 8, 27, 3, 1]
-const max = numeros2.reduce((current_max, valor) => {
-    if (valor > current_max) { // 66 > 5
-        return valor
-    } else {
+const max = numeros2.reduce((current_max, elemento) => {
+    if(elemento > current_max) // 2 > 66
+        return elemento
+    else 
         return current_max
-    }z
-},0) // Current max es el acumulador. Compara numero por numero
-// const max = numeros2.reduce((current_max, valor) => valor > current_max ? valor : current_max, 0)    --- Esto es igual al if
+}, 0) // current_max = 66
+
+// const max = numeros2.reduce((current_max, elemento) => elemento > current_max ? elemento : current_max, 0)
 console.log(max)
 
-console.log ("-----------------------")
+console.log("---------------------")
+// Every
 
-// Every 
 const numeros3 = [2, 4, 6, 8]
 const todosPares = numeros3.every(elemento => elemento % 2 === 0)
 console.log(todosPares)
-// O de otra forma, en una sola linea:
 console.log(numeros3[0] % 2 === 0 && numeros3[1] % 2 === 0 && numeros3[2] % 2 === 0 && numeros3[3] % 2 === 0)
 
-console.log ("-----------------------")
 
+console.log("----------------")
 // Some
-const numeros4 = [1, 2, 3, 3, 5]
+
+const numeros4 = [1, 2, 3, 4, 5]
 const hayPares = numeros4.some(elemento => elemento % 2 === 0)
 console.log(hayPares)
-console.log(numeros4[0] % 2 === 0 || numeros4[1] % 2 === 0 || numeros4[2] % 2 === 0 || numeros4[3] % 2 === 0 || numeros4[4] % 2 === 0)
+console.log(numeros4[0] % 2 === 0 || numeros4[1] % 2 === 0 || numeros4[2] % 2 === 0 || numeros4[3] % 2 === 0)
 
-console.log ("-----------------------")
+
+console.log("-----------------")
 
 // Includes
-const nombres = ['Mackaber', 'Luis', 'Ana', 'Pedro', 'Juan']
-const incluyeJuan = nombres.includes('Juan')
+
+const nombres = ["Ana", "Juan", "Pedro"]
+const incluyeJuan = nombres.includes("Mackaber")
 console.log(incluyeJuan)
 
-console.log ("-----------------------")
+/*
+let estudiante = {
+    nombre: "Ana",
+    materias_calificaciones: [
+        {"Matematicas": 90}, {"Historia": 85}, {"Ciencias": 92}
+    ]
+}
 
-let carritocompras = {
+let estudiante = {
+    nombre: "Ana",
+    materias: [
+        {
+            nombre: "Matemáticas",
+            calificacion: 90
+        },
+        {
+            nombre: "Historia",
+            calificacion: 85
+        },
+        {
+            nombre: "Ciencias",
+            calificacion: 92
+        }
+    ]
+}*/
+
+console.log("---------------")
+
+let carritoCompras = {
     productos: [],
-    agregarProducto: function (producto) {
+    agregarProducto: function(producto) {
         this.productos.push(producto)
     },
-    eliminarProducto: function(indice) {
+    eliminarProducto: function (indice) {
         this.productos.splice(indice, 1)
     },
     this_en_objeto: function() {
         return this
     },
-    this_en_arrow: () => {
+    this_en_arrow_function: () => {
         return this
     }
-
 }
 
-carritocompras.agregarProducto('Leche')
-carritocompras.agregarProducto('Manzanas')
-carritocompras.agregarProducto('Platanos')
-carritocompras.agregarProducto('Uvas')
+carritoCompras.agregarProducto("Manzanas")
+carritoCompras.agregarProducto("Plátanos")
+carritoCompras.agregarProducto("Uvas")
+console.log(carritoCompras.productos)
 
-console.log(carritocompras.productos)
+carritoCompras.eliminarProducto(0)
+console.log(carritoCompras.productos)
 
-carritocompras.eliminarProducto(0) //Elimina el primero
-console.log(carritocompras.productos)
-console.log(carritocompras.this_en_objeto())
-console.log(carritocompras.this_en_arrow())
+console.log(carritoCompras.this_en_objeto())
+console.log(carritoCompras.this_en_arrow_function())
