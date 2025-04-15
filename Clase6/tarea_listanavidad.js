@@ -1,5 +1,5 @@
 
-// Lista de regalos
+// Lista de regalos para Navidad
 const gifts = ["Muñeca", "Carro de juguete", "Rompecabezas", "Lego", "Pelota", "Un hunko de Harry Potter", "Jenga", "Xbox", "Oso de peluche"];
 
 // Función recursiva para buscar un regalo
