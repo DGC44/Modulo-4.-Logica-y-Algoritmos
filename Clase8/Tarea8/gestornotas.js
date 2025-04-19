@@ -38,7 +38,7 @@ function listarNotas() {
       console.log(`${index + 1}. ${nota.titulo}: ${nota.contenido}`);
     });
   } else {
-    console.log('⚠️ No hay notas guardadas.');
+    console.log('No hay notas guardadas.');
   }
 }
 
@@ -55,7 +55,7 @@ function eliminarNota(titulo) {
 
     if (notas.length === notasRestantes.length) {
       console.log("-----------------------------");
-      console.log(`❌ No se encontró una nota con el título "${titulo}".`);
+      console.log(`No se encontró una nota con el título "${titulo}".`);
     } else {
       fs.writeFileSync(filePath, JSON.stringify(notasRestantes, null, 2));
       console.log("-----------------------------");
@@ -63,7 +63,7 @@ function eliminarNota(titulo) {
     }
   } else {
     console.log("-----------------------------");
-    console.log('⚠️ No hay notas para eliminar.');
+    console.log('No hay notas para eliminar.');
   }
 }
 
