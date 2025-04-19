@@ -1,1 +1,14 @@
-[]
+[
+    {
+      "titulo": "Compras",
+      "contenido": "Comprar leche y pan."
+    },
+    {
+      "titulo": "Estudio",
+      "contenido": "Repasar temas de matemáticas para el examen."
+    },
+    {
+      "titulo": "Trabajo",
+      "contenido": "Enviar informe semanal al jefe."
+    }
+]
