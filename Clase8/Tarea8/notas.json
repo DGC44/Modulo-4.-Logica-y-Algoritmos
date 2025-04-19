@@ -1,14 +1,18 @@
 [
-    {
-      "titulo": "Compras",
-      "contenido": "Comprar leche y pan."
-    },
-    {
-      "titulo": "Estudio",
-      "contenido": "Repasar temas de matemáticas para el examen."
-    },
-    {
-      "titulo": "Trabajo",
-      "contenido": "Enviar informe semanal al jefe."
-    }
+  {
+    "titulo": "Compras",
+    "contenido": "Comprar leche y pan."
+  },
+  {
+    "titulo": "Estudio",
+    "contenido": "Repasar temas de Investigacion de Operaciones para el examen."
+  },
+  {
+    "titulo": "Universidad",
+    "contenido": "Terminar proyectos y enviar a Teams."
+  },
+  {
+    "titulo": "Deudas Pendientes",
+    "contenido": "Pagar tarjeta de credito."
+  }
 ]
